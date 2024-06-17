@@ -1,0 +1,26 @@
+services:
+  mongo:
+    image: mongo:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS}
+    networks:
+      - mongo_net
+    restart: always
+
+networks:
+  mongo_net:
+    driver: bridge 
+
+volumes:
+  mongo-data:
+    driver: local
+
