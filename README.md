@@ -25,7 +25,7 @@ Clone o reponsitório com o comando abaixo:
 git clone https://github.com/zthiagosantos/mongodb-docker.git
 ```
 
-Edite o usuário e senha no arquivo `.env`.
+Edite as variáveis de usuário e senha no arquivo `.env`:
 ```env
 MONGO_USER=admin
 MONGO_PASS=admin
@@ -33,7 +33,7 @@ MONGO_PASS=admin
 
 Execute o container com o comando abaixo:
 ```bash
-docker compose up --build -d
+docker compose up -d
 ```
 
 Para verificar se o container está executando use o comando abaixo:
@@ -79,11 +79,13 @@ d. Adicione o template no host e configure as macros abaixo:
 | MACRO                 | VALOR PADRÃO          |
 | --------------------- | --------------------- |
 | {$MONGODB.CONNSTRING} | tcp://localhost:27017 |
-| {$MONGODB.USER}       | --                    |
-| {$MONGODB.PASSWORD}   | --                    |
+| {$MONGODB.USER}       |          --           |
+| {$MONGODB.PASSWORD}   |          --           |
 
 e. Por fim Valide as coletas.
 
+#### Referencia
+> [Documentação Zabbix](https://www.zabbix.com/integrations/mongodb)
 
 ### REMOVER MONGODB
 Remover apenas o container:
