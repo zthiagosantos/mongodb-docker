@@ -43,8 +43,8 @@ docker ps
 
 <br>
 
-> [!IMPORTANT]
-> #### Para que o monitoramento do `MongoDB` funcione corretamente, siga as instruções abaixo:
+> [!NOTE]
+> #### As instruções abaixo são para configurar o monitoramento do `MongoDB` no `Zabbix`. Se não precisar dessa configuração, fique à vontade para ignorá-la.
 
 ### MONITORANDO COM O ZABBIX
 
