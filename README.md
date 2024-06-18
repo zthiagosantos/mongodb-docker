@@ -82,7 +82,7 @@ d. Adicione o template no host e configure as macros abaixo:
 | {$MONGODB.USER}       |          --           |
 | {$MONGODB.PASSWORD}   |          --           |
 
-e. Por fim Valide as coletas.
+e. Por fim, valide as coletas.
 
 #### Referencia
 > [Documentação Zabbix](https://www.zabbix.com/integrations/mongodb)
