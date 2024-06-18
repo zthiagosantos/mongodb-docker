@@ -58,23 +58,23 @@ docker exec -it mongodb mongosh
 
 c. Execute os comandos:
 ```bash
-# use admin
-# db.auth("admin", "<ADMIN_PASSWORD>")
+use admin
+db.auth("admin", "<ADMIN_PASSWORD>")
 
-# db.createUser({
-#   "user": "zbx_monitor",
-#   "pwd": "<PASSWORD>",
-#   "roles": [
-#     { role: "readAnyDatabase", db: "admin" },
-#     { role: "clusterMonitor", db: "admin" },
-#   ]
-# })
+db.createUser({
+  "user": "zbx_monitor",
+  "pwd": "<PASSWORD>",
+  "roles": [
+    { role: "readAnyDatabase", db: "admin" },
+    { role: "clusterMonitor", db: "admin" },
+  ]
+})
 ```
 
 > [!NOTE]
 > #### Substitua `<PASSWORD>` pela senha desejada para o usuário zabbix e `<ADMIN_PASSWORD>` pela senha do usuário administrador.
 
-d. Adicione o template no host e configure as macros abaixo:
+d. Adicione o template `MongoDB node by Zabbix agent 2` no host e configure as macros abaixo:
 
 | MACRO                 | VALOR PADRÃO          |
 | --------------------- | --------------------- |
