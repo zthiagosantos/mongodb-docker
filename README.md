@@ -84,7 +84,6 @@ d. Adicione o template no host e configure as macros abaixo:
 
 e. Por fim Valide as coletas.
 
-<br>
 
 ### REMOVER MONGODB
 Remover apenas o container:
